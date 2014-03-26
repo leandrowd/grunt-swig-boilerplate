@@ -1,7 +1,5 @@
 body {
-    &.topbar-fixed {
-        padding-top: 60px;
-    }
+
 }
 
 .content {
@@ -12,5 +10,4 @@ body {
         width: $base-content-size;
         margin: auto;
     }
-
 }

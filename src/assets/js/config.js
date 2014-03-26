@@ -12,12 +12,7 @@ var paths = {
     crossroads: '../bower_components/crossroads.js/dist/crossroads.min',
     jquery: '../bower_components/jquery/jquery.min',
     jquerymigrate: '../bower_components/jquery/jquery-migrate.min',
-    signals: '../bower_components/js-signals/dist/signals.min',
-    pace: '../bower_components/pace/pace',
-    easing: '../bower_components/jquery.easing/js/jquery.easing',
-    happy: '../bower_components/Happy.js/happy',
-    fancybox: '../bower_components/fancybox/source/jquery.fancybox',
-    packery: 'vendor/packery.pkgd.min'
+    signals: '../bower_components/js-signals/dist/signals.min'
 };
 
 // If file is required by node, export paths only
@@ -37,10 +32,6 @@ if (typeof module === 'object' && module && typeof module.exports === 'object') 
                 },
                 crossroads: {
                     deps: ['signals']
-                },
-                packery: {
-                    deps: ['jquery'],
-                    exports: '$.fn.packery'
                 }
             }
         });

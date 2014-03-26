@@ -44,14 +44,8 @@ require(['config'], function () {
 
     require(['crossroads'], function (crossroads) {
         crossroads.addRoute('/', function () {
-            require(['pages/introduction'], function (introduction) {
-                introduction.init();
-            });
-        });
-
-        crossroads.addRoute('/lifestyle.html', function () {
-            require(['pages/lifestyle'], function (lifestyle) {
-                lifestyle.init();
+            require(['pages/home'], function (home) {
+                home.init();
             });
         });
 
