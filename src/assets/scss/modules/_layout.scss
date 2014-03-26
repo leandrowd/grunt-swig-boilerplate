@@ -1,0 +1,16 @@
+body {
+    &.topbar-fixed {
+        padding-top: 60px;
+    }
+}
+
+.content {
+    width: 100%;
+    margin: 0;
+
+    @include media-query(tablet) {
+        width: $base-content-size;
+        margin: auto;
+    }
+
+}

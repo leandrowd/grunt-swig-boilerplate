@@ -1,0 +1,54 @@
+.footer {
+    background: url(#{$image-path}/footer-bg.jpg) center bottom;
+    margin-top: 70px;
+    width: 100%;
+    text-align: center;
+    height: 320px;
+
+    .note {
+        @extend .font-novecento-medium;
+        color: $color-white;
+        border-bottom: 8px solid $color-white;
+        background: $color-black;
+        text-align: center;
+        padding: 12px;
+        margin-bottom: 75px;
+        font-size: 19px;
+    }
+
+    .partners {
+        display: none;
+        float: left;
+        width: 270px;
+
+        @include media-query(tablet) {
+            display: inline-block;
+        }
+
+        img {
+            display: block;
+
+            @include media-query(tablet) {
+                margin: 10px;
+                display: inline-block;
+                vertical-align: middle;
+            }
+        }
+    }
+
+    .disclaimer {
+        @extend .font-futura-bold;
+        font-size: 13px;
+        margin: 20px 0;
+
+
+        @include media-query(tablet) {
+            float: right;
+            width: 270px;
+        }
+    }
+
+    .logo {
+        width: 195px;
+    }
+}

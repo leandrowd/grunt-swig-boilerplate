@@ -1,0 +1,43 @@
+/* ==========================================================================
+   Typography
+   ========================================================================== */
+
+/**
+ * Custom font from Google Webfonts included in site header using JavaScript
+ * Google Webfont Link - http://www.google.com/fonts/#UsePlace:use/Collection:Source+Sans+Pro
+ */
+
+/* Fonts Mixins
+   ========================================================================== */
+
+@mixin web-font($name, $file, $weight, $style) {
+    @font-face {
+        font-family: $name;
+        src: url('#{$file}.eot');
+        src: url('#{$file}.eot?#iefix') format('embedded-opentype'),
+             url('#{$file}.woff') format('woff'),
+             url('#{$file}.ttf') format('truetype'),
+             url('#{$file}.svg') format('svg');
+        @if $weight {
+            font-weight: $weight;
+        }
+        @if $style {
+            font-style: $style;
+        }
+    }
+}
+
+/**
+ * Positioning text off-screen for accessibility
+ */
+
+.visually-hidden {
+    position: absolute;
+    left: -10000px;
+    top: auto;
+    width: 1px;
+    height: 1px;
+    overflow: hidden;
+}
+
+@include web-font ('OPTIDiode', '#{$font-path}/optidiode/optidiode-webfont', '100', 'normal');

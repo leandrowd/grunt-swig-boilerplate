@@ -1,0 +1,48 @@
+/* ==========================================================================
+   Defaults
+   ========================================================================== */
+
+*,
+*:before,
+*:after {
+    @include box-sizing(border-box);
+    margin: 0;
+    padding: 0;
+}
+
+html {
+    width: 100%;
+    overflow-x: hidden;
+}
+
+body {
+    background: $color-white;
+    font-family: $base-font-family;
+    font-weight: $base-font-weight;
+    font-size: $base-font-size;
+    line-height: $base-line-height;
+}
+
+img {
+    max-width: 100%;
+    border: 0;
+}
+
+a {
+    color: $color-link;
+    text-decoration: none;
+
+    &:visited {
+        color: $color-link;
+    }
+
+    &:hover {
+        color: $color-link-hover;
+    }
+}
+
+ul, li {
+    list-style: none inside;
+}
+
+

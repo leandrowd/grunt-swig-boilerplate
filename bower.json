@@ -1,0 +1,21 @@
+{
+  "name": "Grunt Swig Boilerplate",
+  "version": "0.0.0",
+  "description": "Grunt Swig Boilerplate",
+  "repository": {
+    "type": "git",
+    "url": ""
+  },
+  "author": "Leandro Augusto Lemos",
+  "license": "BSD",
+  "private": false,
+  "devDependencies": {
+    "almond": "~0.2.6",
+    "compass-mixins": "~1.0.0",
+    "crossroads.js": "~0.12.0",
+    "js-signals": "~1.0.0",
+    "jquery": "~2.0.3",
+    "modernizr": "~2.6.2",
+    "requirejs": "~2.1.9"
+  }
+}

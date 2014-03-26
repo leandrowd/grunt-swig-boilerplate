@@ -1,0 +1,3 @@
+{% set imagesPath = "/assets/img/" %}
+
+

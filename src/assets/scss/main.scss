@@ -1,0 +1,32 @@
+/* ==========================================================================
+   Main
+   ========================================================================== */
+
+/**
+ * This is the place where all other modules and page-specific styles should be included
+ * Code Styleguide: https://github.com/necolas/idiomatic-css
+ */
+
+/* Variables, Compass, Normalize and other external libraries
+   ========================================================================== */
+
+@import "variables";
+@import "../bower_components/compass-mixins/lib/compass";
+
+/* Global mixins and configurations
+   ========================================================================== */
+
+@import "mixins";
+@import "typography";
+@import "defaults";
+@import "layout";
+
+/* Modules
+   ========================================================================== */
+
+// Globals
+@import "modules/layout";
+
+/* Page specific styles
+   ========================================================================== */
+@import "pages/home";

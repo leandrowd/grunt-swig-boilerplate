@@ -1,0 +1,62 @@
+/* ==========================================================================
+   Mixins
+   ========================================================================== */
+
+/**
+ * Media-queries structure
+ * Everything is min-width based, therefore higher breakpoints will always override lower ones
+ * All metrics include the one that's used. So if you use 'desktop' it'll include 1024px and not just start from 1025px
+ *
+ * Naming convention:
+ *
+ * smalltablet = 31.25em = 500px
+ * tablet = 48em = 768px
+ * desktop = 31.25em = 1024px
+ * large = 31.25em = 1400px
+ *
+ * retina = min-device-pixel-ratio: 2 = min-resolution: 192dpi
+ *
+ * Usage:
+ *     .content {
+ *         (...)
+ *
+ *         @include media-query(large) {
+ *             (...)
+ *         }
+ *     }
+ *
+ * See `_variables.scss` for numbers
+ */
+
+@mixin media-query($name) {
+    @each $breakpoint in $breakpoints {
+        @if nth($breakpoint, 1) == $name {
+            @media only screen and #{nth($breakpoint, 2)} {
+                @content;
+            }
+        }
+    }
+}
+
+/**
+ * Input placeholder
+ * cross browser placeholder seletor
+ *
+ * Usage:
+ *     .content {
+ *         @include input-placeholder($color-black);
+ *     }
+ *
+ */
+
+@mixin input-placeholder($color) {
+  &.placeholder {
+    color: $color;
+    }
+  &:-moz-placeholder {
+    color: $color;
+    }
+  &::-webkit-input-placeholder {
+    color: $color;
+    }
+}

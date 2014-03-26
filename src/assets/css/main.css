@@ -1,0 +1,153 @@
+/* ==========================================================================
+   Main
+   ========================================================================== */
+/**
+ * This is the place where all other modules and page-specific styles should be included
+ * Code Styleguide: https://github.com/necolas/idiomatic-css
+ */
+/* Variables, Compass, Normalize and other external libraries
+   ========================================================================== */
+/* ==========================================================================
+   Variables
+   ========================================================================== */
+/* Grid, layout and break-points configuration
+   ========================================================================== */
+/* Colors
+   ========================================================================== */
+/* Global mixins and configurations
+   ========================================================================== */
+/* ==========================================================================
+   Mixins
+   ========================================================================== */
+/**
+ * Media-queries structure
+ * Everything is min-width based, therefore higher breakpoints will always override lower ones
+ * All metrics include the one that's used. So if you use 'desktop' it'll include 1024px and not just start from 1025px
+ *
+ * Naming convention:
+ *
+ * smalltablet = 31.25em = 500px
+ * tablet = 48em = 768px
+ * desktop = 31.25em = 1024px
+ * large = 31.25em = 1400px
+ *
+ * retina = min-device-pixel-ratio: 2 = min-resolution: 192dpi
+ *
+ * Usage:
+ *     .content {
+ *         (...)
+ *
+ *         @include media-query(large) {
+ *             (...)
+ *         }
+ *     }
+ *
+ * See `_variables.scss` for numbers
+ */
+/**
+ * Input placeholder
+ * cross browser placeholder seletor
+ *
+ * Usage:
+ *     .content {
+ *         @include input-placeholder($color-black);
+ *     }
+ *
+ */
+/* ==========================================================================
+   Typography
+   ========================================================================== */
+/**
+ * Custom font from Google Webfonts included in site header using JavaScript
+ * Google Webfont Link - http://www.google.com/fonts/#UsePlace:use/Collection:Source+Sans+Pro
+ */
+/* Fonts Mixins
+   ========================================================================== */
+/**
+ * Positioning text off-screen for accessibility
+ */
+.visually-hidden {
+  position: absolute;
+  left: -10000px;
+  top: auto;
+  width: 1px;
+  height: 1px;
+  overflow: hidden; }
+
+@font-face {
+  font-family: 'OPTIDiode';
+  src: url('/assets/fonts/optidiode/optidiode-webfont.eot');
+  src: url('/assets/fonts/optidiode/optidiode-webfont.eot?#iefix') format('embedded-opentype'), url('/assets/fonts/optidiode/optidiode-webfont.woff') format('woff'), url('/assets/fonts/optidiode/optidiode-webfont.ttf') format('truetype'), url('/assets/fonts/optidiode/optidiode-webfont.svg') format('svg');
+  font-weight: '100';
+  font-style: 'normal'; }
+
+/* ==========================================================================
+   Defaults
+   ========================================================================== */
+*, *:before, *:after {
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  -ms-box-sizing: border-box;
+  -o-box-sizing: border-box;
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0; }
+
+html {
+  width: 100%;
+  overflow-x: hidden; }
+
+body {
+  background: white;
+  font-family: "HelveticaNeue-Light", "Helvetica Neue Light", "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 1; }
+
+img {
+  max-width: 100%;
+  border: 0; }
+
+a {
+  color: #333333;
+  text-decoration: none; }
+  a:visited {
+    color: #333333; }
+  a:hover {
+    color: black; }
+
+ul, li {
+  list-style: none inside; }
+
+.header {
+  border: 1px solid green;
+  padding: 20px; }
+
+.content {
+  border: 1px solid red;
+  padding: 20px; }
+
+.footer {
+  border: 1px solid blue;
+  padding: 20px; }
+
+/* Modules
+   ========================================================================== */
+body.topbar-fixed {
+  padding-top: 60px; }
+
+.content {
+  width: 100%;
+  margin: 0; }
+  @media only screen and (min-width: 48rem) {
+    .content {
+      width: 960px;
+      margin: auto; } }
+
+/* Page specific styles
+   ========================================================================== */
+.home .home-navigation {
+  margin-top: 22px; }
+.home .header-content .content-title {
+  font-size: 24px;
+  line-height: 49px; }
